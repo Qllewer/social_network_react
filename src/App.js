@@ -14,12 +14,14 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
+          fff
           <Routes>
             <Route
               path="/dialogs"
-              element={<DialogsContainer store={props.store} />}/>
-            <Route path="/profile" element={<Profile store={props.store} />}/>
-            <Route path="/users" element={<UsersContainer />  }/>
+              element={<DialogsContainer store={props.store} />}
+            />
+            <Route path="/profile" element={<Profile store={props.store} />} />
+            <Route path="/users" element={<UsersContainer />} />
           </Routes>
         </div>
       </div>
