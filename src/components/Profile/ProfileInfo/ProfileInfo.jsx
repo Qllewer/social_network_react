@@ -7,7 +7,7 @@ const ProfileInfo = () => {
         <div>
             <div>
                 <img
-                    src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350'/>
+                    src='https://www.indiewire.com/wp-content/uploads/2017/08/it.jpg?w=600&h=337&crop=1'/>
             </div>
             <div className={s.descriptionBlock}>
                 ava + description
