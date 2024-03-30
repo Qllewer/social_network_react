@@ -14,7 +14,6 @@ const App = (props) => {
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          rrrrrrrrrrrr
           <Routes>
             <Route
               path="/dialogs"
