@@ -1,12 +1,20 @@
 import React from "react";
 import styles from './Users.module.css'
+import axios from "axios";
+
 let Users = (props) => {
+
+    // axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
+    //     props.setUsers(response.data.items)
+
+    // })
+
     if (props.users.length === 0) {
     props.setUsers([
-        { id: 1, photoUrl:'https://тайна-вашего-имени.рф/img/imena/dmitriy.jpg', followed:false, fullName: "Dmitry", status: 'Crazy', location: {city: 'Minsk', country: 'Belarus'} },
-        { id: 2, photoUrl:'https://тайна-вашего-имени.рф/img/imena/dmitriy.jpg',  followed:true, fullName: "Sasha", status: 'Im hungry', location: {city: 'Moskva', country: 'Russia'} },
-        { id: 3, photoUrl:'https://тайна-вашего-имени.рф/img/imena/dmitriy.jpg',  followed:false, fullName: "Nikita", status: 'Evil', location: {city: 'Alma-Ata', country: 'Kazakhstan'} },
-        { id: 4, photoUrl:'https://тайна-вашего-имени.рф/img/imena/dmitriy.jpg',  followed:true, fullName: "Pavel", status: 'Sad', location: {city: 'Kiev', country: 'Ukraine'} },])
+        { id: 1, photoUrl:'src/components/Users/images/zaglushka.png', followed:false, name: "Dmitry", status: 'Crazy', location: {city: 'Minsk', country: 'Belarus'} },
+        { id: 2, photoUrl:'/images/zaglushka.jpg',  followed:true, name: "Sasha", status: 'Im hungry', location: {city: 'Moskva', country: 'Russia'} },
+        { id: 3, photoUrl:'/images/zaglushka.jpg',  followed:false, name: "Nikita", status: 'Evil', location: {city: 'Alma-Ata', country: 'Kazakhstan'} },
+        { id: 4, photoUrl:'/images/zaglushka.jpg',  followed:true, name: "Pavel", status: 'Sad', location: {city: 'Kiev', country: 'Ukraine'} },])
     }
     return(
         <div>
@@ -14,7 +22,7 @@ let Users = (props) => {
                 props.users.map(u => <div key={u.id}>
                     <span>
                         <div>
-                            <img src={u.photoUrl} className={styles.userPhoto}></img>
+                            <img src="src/images/zaglushka.jpg" className={styles.userPhoto}></img>
                         </div>
                         <div>
                             {u.followed 
@@ -24,12 +32,12 @@ let Users = (props) => {
                     </span>
                     <span>
                         <span>
-                            <div>{u.fullName}</div>
+                            <div>{u.name}</div>
                             <div>{u.status}</div>
                         </span>
                         <span>
-                             <div>{u.country}</div>
-                            <div>{u.location.city}</div>
+                             {/* <div>{"u.country"}</div>
+                            <div>{"u.location.city"}</div> */}
                         </span>
                     </span>
                 </div>)

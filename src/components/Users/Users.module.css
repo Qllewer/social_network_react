@@ -1,4 +1,4 @@
 .userPhoto{
-    width: 200px;
-    height: 300px;
+    max-width: 100px;
+    max-height: 100px;
 }
