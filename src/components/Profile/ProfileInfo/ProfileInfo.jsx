@@ -10,7 +10,7 @@ const ProfileInfo = () => {
                     src='https://www.indiewire.com/wp-content/uploads/2017/08/it.jpg?w=600&h=337&crop=1'/>
             </div>
             <div className={s.descriptionBlock}>
-                {/* ava + description */}
+                ava + description
             </div>
         </div>
     )
