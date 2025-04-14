@@ -7,7 +7,7 @@ import { Field, reduxForm } from "redux-form";
 import { Textarea } from '../Common/FormControls';
 import { maxLengthCreator, required } from '../../utils/validators';
 
-const Dialogs = (props) => {
+const Dialogs = React.memo((props) => {
 	let state = props.dialogsPage
 	let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
 	let messagesElements = state.messages.map(m => <Message message={m.message} />);
@@ -43,6 +43,6 @@ const Dialogs = (props) => {
 			<AddMessageReduxForm onSubmit={addNewMessage} />
 		</div>
 	)
-}
+})
 
 export default Dialogs;

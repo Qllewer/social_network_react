@@ -1,10 +1,10 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Loader from '../../Common/Loader/Loader';
-import ProfileStatus from './ProfileStatus';
+import ProfileStatusWithHooks from './ProfileStatusWithhooks';
 
 
-const ProfileInfo = (props) => {
+const ProfileInfo = React.memo((props) => {
 	if (!props.profile) {
 		return <Loader />
 	}
@@ -16,10 +16,10 @@ const ProfileInfo = (props) => {
 			</div>
 			<div className={s.descriptionBlock}>
 				{/* <img src={props.profile.photos.large} /> */}
-				<ProfileStatus status={props.status} updateStatus={props.updateStatus} />
+				<ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus} />
 			</div>
 		</div>
 	)
-}
+})
 
 export default ProfileInfo;
