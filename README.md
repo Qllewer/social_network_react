@@ -1,44 +1,88 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Социальная сеть на React
 
-## Available Scripts
+## Описание проекта
+Это современное веб-приложение социальной сети, разработанное с использованием React и Redux. Проект предоставляет пользователям возможность взаимодействовать друг с другом, делиться контентом и общаться в реальном времени.
 
-In the project directory, you can run:
+## Используемые технологии
+- **Frontend:**
+  - React.js (версия 18.x) - библиотека для построения пользовательских интерфейсов
+  - Redux (версия 4.x) - библиотека для управления состоянием приложения
+    - Redux Thunk - middleware для асинхронных действий
+    - React-Redux - официальные React биндинги для Redux
+  - React Router (версия 6.x) - библиотека для маршрутизации в React приложениях
+  - Axios (версия 1.x) - HTTP-клиент для выполнения запросов к API
+  - CSS Modules - подход к изоляции стилей компонентов
+  - Formik - библиотека для работы с формами
+  - Yup - библиотека для валидации форм
+  - React Hook Form - альтернативная библиотека для работы с формами
 
-### `npm start`
+- **API и интеграции:**
+  - REST API для взаимодействия с бэкендом
+  - WebSocket для real-time функциональности
+  - JWT для аутентификации
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Требования
+- Node.js (версия 14.0.0 или выше)
+- npm (версия 6.0.0 или выше)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Установка и запуск проекта
 
-### `npm test`
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/Qllewer/social_network_react
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Перейдите в директорию проекта:
+```bash
+cd social_network_react
+```
 
-### `npm run build`
+3. Установите зависимости:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Запустите проект в режиме разработки:
+```bash
+npm start
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Приложение будет доступно по адресу [http://localhost:3000](http://localhost:3000)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Структура проекта
+```
+src/
+  ├── components/           # React компоненты
+  │   ├── common/          # Переиспользуемые компоненты (кнопки, инпуты, модальные окна)
+  │   ├── layout/          # Компоненты макета (хедер, футер, сайдбар)
+  │   ├── profile/         # Компоненты профиля пользователя
+  │   ├── dialogs/         # Компоненты для системы сообщений
+  │   ├── users/           # Компоненты для отображения списка пользователей
+  │   └── auth/            # Компоненты аутентификации
+  │
+  ├── redux/               # Redux логика
+  │   ├── reducers/        # Редьюсеры для разных частей приложения
+  │   ├── actions/         # Action creators
+  │   ├── thunks/          # Thunk middleware для асинхронных действий
+  │   └── store.js         # Конфигурация Redux store
+  │
+  ├── api/                 # API взаимодействие
+  │   ├── api.js           # Базовые настройки axios
+  │   ├── auth-api.js      # API методы для аутентификации
+  │   ├── profile-api.js   # API методы для профиля
+  │   └── users-api.js     # API методы для работы с пользователями
+  │
+  ├── utils/               # Вспомогательные функции
+  │   ├── validators/      # Функции валидации
+  │   ├── helpers/         # Общие вспомогательные функции
+  │   └── constants/       # Константы приложения
+  │
+  ├── hooks/               # Кастомные React хуки
+  ├── context/             # React контексты
+  ├── routes/              # Конфигурация маршрутизации
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Скрипты
+- `npm start` - запуск проекта в режиме разработки
+- `npm build` - сборка проекта для продакшена
+- `npm run eject` - извлечение конфигурации Create React App
